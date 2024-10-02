@@ -33,6 +33,11 @@
           display: none;
         }
       }
+
+      #typing-effect {
+        font-size: 1.5rem;
+        color: #000;
+      }
     </style>
   </head>
   <body class="bg-gradient-to-r from-blue-50 to-white font-roboto">
@@ -83,7 +88,7 @@
         <h1 class="text-4xl md:text-5xl font-bold">
           I'm <span class="text-orange-500">Fikhru Maulana</span>
         </h1>
-        <p class="text-lg md:text-2xl mt-4">Front-End Web Developer</p>
+        <p id="typing-effect" class="text-lg md:text-2xl mt-4"></p>
         <button
           class="mt-6 px-6 md:px-8 py-2 md:py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105"
         >
@@ -127,10 +132,47 @@
       // JavaScript untuk mengontrol burger menu di mobile
       const menuBtn = document.getElementById('menu-btn');
       const mobileNav = document.getElementById('mobile-nav');
-
+    
       menuBtn.addEventListener('click', () => {
         mobileNav.classList.toggle('hidden');
       });
+    
+      // Typing effect script dengan penyesuaian kecepatan
+      const typedText = "Front-End Web Developer";
+      let index = 0;
+      let isDeleting = false;
+      let typingSpeed = 100;  // Kecepatan mengetik dipercepat
+      let deletingSpeed = 50; // Kecepatan menghapus dipercepat
+      let pauseTime = 500;    // Waktu jeda sebelum mulai menghapus dikurangi
+    
+      function typeWriter() {
+        const element = document.getElementById("typing-effect");
+    
+        if (isDeleting) {
+          element.innerHTML = typedText.substring(0, index - 1);
+          index--;
+          typingSpeed = deletingSpeed; // Gunakan kecepatan penghapusan
+        } else {
+          element.innerHTML = typedText.substring(0, index + 1);
+          index++;
+        }
+    
+        // Ketika teks selesai ditulis, jeda sebelum mulai menghapus
+        if (!isDeleting && index === typedText.length) {
+          typingSpeed = pauseTime; // Jeda sebelum menghapus
+          isDeleting = true;
+        }
+        // Ketika penghapusan selesai, mulai mengetik lagi
+        else if (isDeleting && index === 0) {
+          typingSpeed = 100; // Kembali ke kecepatan mengetik
+          isDeleting = false;
+        }
+    
+        setTimeout(typeWriter, typingSpeed);
+      }
+    
+      document.addEventListener("DOMContentLoaded", function() {
+        typeWriter();
+      });
     </script>
-  </body>
-</html>
+    
