@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Skills - Codify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-blue-50 to-white text-gray-800">
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-blue-600 text-white shadow-md">
+    <div class="text-3xl font-bold tracking-wide">CODIFY</div>
+
+    <!-- Navigasi -->
+    <nav class="desktop-menu hidden md:flex space-x-6">
+      <a class="hover:text-gray-300 transition-colors" href="index.html">Home</a>
+      <a class="hover:text-gray-300 transition-colors" href="about.html">About</a>
+      <a class="hover:text-gray-300 transition-colors" href="skills.html">Skills</a>
+      <a class="hover:text-gray-300 transition-colors" href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Burger Menu untuk Mobile -->
+    <div class="mobile-menu md:hidden">
+      <button id="menu-btn">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Dropdown Menu Mobile -->
+  <nav id="mobile-nav" class="mobile-menu hidden bg-blue-600 text-white p-4 space-y-2 text-center">
+    <a class="block hover:text-gray-300 transition-colors" href="index.html">Home</a>
+    <a class="block hover:text-gray-300 transition-colors" href="about.html">About</a>
+    <a class="block hover:text-gray-300 transition-colors" href="skills.html">Skills</a>
+    <a class="block hover:text-gray-300 transition-colors" href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="min-h-screen flex flex-col items-center justify-center py-16 px-4 bg-gradient-to-br from-blue-100 to-blue-200">
+    <section class="max-w-4xl mx-auto bg-white p-8 shadow-lg rounded-lg">
+      <h1 class="text-4xl font-bold text-center mb-6">My Skills</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Skill Item 1: HTML -->
+        <div class="flex items-center space-x-4">
+          <i class="fab fa-html5 text-4xl text-orange-600"></i>
+          <div class="w-full">
+            <h3 class="text-xl font-semibold">HTML</h3>
+            <div class="bg-gray-200 rounded-full h-4">
+              <div class="bg-orange-500 h-4 rounded-full" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Item 2: CSS -->
+        <div class="flex items-center space-x-4">
+          <i class="fab fa-css3-alt text-4xl text-blue-600"></i>
+          <div class="w-full">
+            <h3 class="text-xl font-semibold">CSS</h3>
+            <div class="bg-gray-200 rounded-full h-4">
+              <div class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Item 3: JavaScript -->
+        <div class="flex items-center space-x-4">
+          <i class="fab fa-js text-4xl text-yellow-500"></i>
+          <div class="w-full">
+            <h3 class="text-xl font-semibold">JavaScript</h3>
+            <div class="bg-gray-200 rounded-full h-4">
+              <div class="bg-yellow-500 h-4 rounded-full" style="width: 80%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Item 4: Tailwind CSS -->
+        <div class="flex items-center space-x-4">
+          <i class="fab fa-css3-alt text-4xl text-teal-600"></i> <!-- Gunakan ikon berbeda karena tidak ada ikon Tailwind di Font Awesome -->
+          <div class="w-full">
+            <h3 class="text-xl font-semibold">Tailwind CSS</h3>
+            <div class="bg-gray-200 rounded-full h-4">
+              <div class="bg-teal-500 h-4 rounded-full" style="width: 75%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Item 5: React -->
+        <div class="flex items-center space-x-4">
+          <i class="fab fa-react text-4xl text-blue-500"></i>
+          <div class="w-full">
+            <h3 class="text-xl font-semibold">React</h3>
+            <div class="bg-gray-200 rounded-full h-4">
+              <div class="bg-blue-400 h-4 rounded-full" style="width: 70%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Item 6: Git & GitHub -->
+        <div class="flex items-center space-x-4">
+          <i class="fab fa-git-alt text-4xl text-red-600"></i>
+          <div class="w-full">
+            <h3 class="text-xl font-semibold">Git & GitHub</h3>
+            <div class="bg-gray-200 rounded-full h-4">
+              <div class="bg-red-500 h-4 rounded-full" style="width: 75%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="mt-12 text-center">
+      <h3 class="text-2xl font-bold mb-6">Connect with me</h3>
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="text-2xl text-gray-600 hover:text-blue-600 transition-colors">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="text-2xl text-gray-600 hover:text-blue-400 transition-colors">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-2xl text-gray-600 hover:text-blue-700 transition-colors">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="text-2xl text-gray-600 hover:text-black transition-colors">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="text-2xl text-gray-600 hover:text-pink-500 transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript for burger menu -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    menuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
