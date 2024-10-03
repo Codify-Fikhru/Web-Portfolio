@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Fikhru Maulana's portfolio showcasing front-end development skills, projects, and contact information.">
   <title>About Me - Codify</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -13,14 +14,58 @@
     body {
       font-family: "Roboto", sans-serif;
     }
-    h1, h2, h3 {
+
+    h1,
+    h2,
+    h3 {
       font-family: "Poppins", sans-serif;
+    }
+
+    .navbar-scroll {
+      background-color: #1E3A8A;
+      /* Warna biru tua */
+      transition: background-color 0.3s ease;
+    }
+
+    /* Animasi Fade-in untuk main content */
+    main {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 0.8s forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Animasi hover untuk projek */
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Transisi pada header */
+    header {
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-scroll {
+      background-color: #1E3A8A;
+    }
+
+    .mobile-menu {
+      display: none;
+      transition: opacity 0.3s ease;
     }
   </style>
 </head>
+
 <body class="bg-gradient-to-r from-blue-50 to-white text-gray-800">
   <!-- Header -->
-  <header class="flex justify-between items-center p-6 bg-blue-600 text-white shadow-md">
+  <header id="navbar" class="flex justify-between items-center p-6 bg-blue-600 text-white shadow-md">
     <div class="text-3xl font-bold tracking-wide">CODIFY</div>
 
     <!-- Navigasi -->
@@ -62,11 +107,11 @@
         <div class="md:w-2/3 text-center md:text-left">
           <h2 class="text-2xl font-semibold mb-4">Hi, I'm Fikhru Maulana</h2>
           <p class="text-lg leading-relaxed text-gray-700 mb-4">
-            I'm a passionate and creative Front-End Developer with a focus on building beautiful and responsive websites. 
+            I'm a passionate and creative Front-End Developer with a focus on building beautiful and responsive websites.
             My goal is to design and develop websites that are not only functional but also provide an intuitive user experience.
           </p>
           <p class="text-lg leading-relaxed text-gray-700 mb-4">
-            I have a strong foundation in HTML, CSS, and JavaScript, and I'm constantly learning new technologies to enhance my skills. 
+            I have a strong foundation in HTML, CSS, and JavaScript, and I'm constantly learning new technologies to enhance my skills.
             I enjoy collaborating with teams and clients to bring their ideas to life through code.
           </p>
           <p class="text-lg leading-relaxed text-gray-700">
@@ -80,11 +125,11 @@
     <section class="mt-12 text-center">
       <h2 class="text-3xl font-bold mb-6">My Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl transition-shadow duration-300">
+        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl project-card transition-transform duration-300">
           <h3 class="text-xl font-semibold mb-2">Project 1: Portfolio Website</h3>
           <p class="text-gray-700">A personal portfolio website to showcase my skills and projects.</p>
         </div>
-        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl transition-shadow duration-300">
+        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl project-card transition-transform duration-300">
           <h3 class="text-xl font-semibold mb-2">Project 2: E-commerce Website</h3>
           <p class="text-gray-700">An e-commerce platform for a local business built using HTML, CSS, and JavaScript.</p>
         </div>
@@ -119,6 +164,19 @@
     menuBtn.addEventListener('click', () => {
       mobileNav.classList.toggle('hidden');
     });
+
+    // Ambil elemen header
+    const header = document.querySelector('header');
+
+    // Event listener untuk mendeteksi scroll
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) { // Jika scroll lebih dari 50px
+        header.classList.add('navbar-scroll');
+      } else {
+        header.classList.remove('navbar-scroll');
+      }
+    });
   </script>
 </body>
+
 </html>
