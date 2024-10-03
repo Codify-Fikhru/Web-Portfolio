@@ -26,40 +26,6 @@
       /* Warna biru tua */
       transition: background-color 0.3s ease;
     }
-
-    /* Animasi Fade-in untuk main content */
-    main {
-      opacity: 0;
-      transform: translateY(50px);
-      animation: fadeInUp 0.8s forwards;
-      animation-delay: 0.2s;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Animasi hover untuk projek */
-    .project-card:hover {
-      transform: scale(1.05);
-    }
-
-    /* Transisi pada header */
-    header {
-      transition: background-color 0.3s ease;
-    }
-
-    .navbar-scroll {
-      background-color: #1E3A8A;
-    }
-
-    .mobile-menu {
-      display: none;
-      transition: opacity 0.3s ease;
-    }
   </style>
 </head>
 
@@ -125,11 +91,11 @@
     <section class="mt-12 text-center">
       <h2 class="text-3xl font-bold mb-6">My Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl project-card transition-transform duration-300">
+        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl transition-shadow duration-300">
           <h3 class="text-xl font-semibold mb-2">Project 1: Portfolio Website</h3>
           <p class="text-gray-700">A personal portfolio website to showcase my skills and projects.</p>
         </div>
-        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl project-card transition-transform duration-300">
+        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl transition-shadow duration-300">
           <h3 class="text-xl font-semibold mb-2">Project 2: E-commerce Website</h3>
           <p class="text-gray-700">An e-commerce platform for a local business built using HTML, CSS, and JavaScript.</p>
         </div>
@@ -178,5 +144,4 @@
     });
   </script>
 </body>
-
 </html>
