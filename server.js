@@ -21,8 +21,8 @@ app.post('/send-email', (req, res) => {
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      user: 'nwekoder@gmail.com', // Ganti dengan email Anda
-      pass: 'ryvd hsgm qdzl vitb' // Ganti dengan password email Anda
+      user: 'jokiofficialyt@gmail.com', // Ganti dengan email Anda
+      pass: 'kdul gfjv mhjz mkdf' // Ganti dengan password email Anda
     }
   });
 

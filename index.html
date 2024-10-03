@@ -1,176 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Codify</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Roboto", sans-serif;
-      }
-      h1, h2, h3 {
-        font-family: "Poppins", sans-serif;
-      }
-      /* Tambahan gaya untuk burger menu */
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Codify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Tambahan gaya untuk burger menu */
+    .mobile-menu {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
       .mobile-menu {
+        display: block;
+      }
+
+      .desktop-menu {
         display: none;
       }
+    }
 
-      @media (max-width: 768px) {
-        .mobile-menu {
-          display: block;
-        }
-        .desktop-menu {
-          display: none;
-        }
-      }
+    #typing-effect {
+      font-size: 1.5rem;
+      color: #000;
+    }
+  </style>
+</head>
 
-      #typing-effect {
-        font-size: 1.5rem;
-        color: #000;
-      }
-    </style>
-  </head>
-  <body class="bg-gradient-to-r from-blue-50 to-white font-roboto">
-    <!-- Header -->
-    <header id="navbar" class="flex justify-between items-center sticky top-0 left-0 w-full p-6 bg-blue-600 lg:bg-blue-100 transition-colors text-white lg:text-black">
-      <div class="text-3xl font-bold tracking-wide">CODIFY</div>
-      
-      <!-- Navigasi Desktop (sembunyi di mobile) -->
-      <nav class="desktop-menu hidden md:flex space-x-6">
-        <a class="hover:text-gray-300 transition-colors relative after:w-0 hover:after:w-4/5 after:h-0.5 after:bg-white after:transition-all after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2" href="index.html">Home</a>
-        <a class="hover:text-gray-300 transition-colors relative after:w-0 hover:after:w-4/5 after:h-0.5 after:bg-white after:transition-all after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2" href="about.html">About</a>
-        <a class="hover:text-gray-300 transition-colors relative after:w-0 hover:after:w-4/5 after:h-0.5 after:bg-white after:transition-all after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2" href="skills.html">Skills</a>
-        <a class="hover:text-gray-300 transition-colors relative after:w-0 hover:after:w-4/5 after:h-0.5 after:bg-white after:transition-all after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2" href="contact.html">Contact</a>
-      </nav>
+<body class="bg-gradient-to-r from-blue-50 to-white font-roboto">
+  <!-- Header -->
+  <header id="navbar"
+    class="flex justify-between items-center sticky top-0 left-0 w-full p-6 bg-blue-600 lg:bg-blue-100 transition-colors text-white lg:text-black">
+    <div class="text-3xl font-bold tracking-wide">CODIFY</div>
 
-      <!-- Burger Menu untuk Mobile -->
-      <div class="mobile-menu md:hidden">
-        <button id="menu-btn">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
-      </div>
-    </header>
-
-    <script>
-      const navbar = document.querySelector('#navbar')
-
-      window.addEventListener('scroll', () => {
-        if(scrollY > 10) {
-          navbar.classList.add('lg:bg-blue-600', 'lg:text-white', 'shadow-md')
-        }else {
-          navbar.classList.remove('lg:bg-blue-600', 'lg:text-white', 'shadow-md')
-        }
-      })
-    </script>
-
-    <!-- Dropdown Menu Mobile -->
-    <nav id="mobile-nav" class="mobile-menu hidden bg-blue-600 text-white p-4 space-y-2 text-center">
-      <a class="block hover:text-gray-300 transition-colors" href="index.html">Home</a>
-      <a class="block hover:text-gray-300 transition-colors" href="about.html">About</a>
-      <a class="block hover:text-gray-300 transition-colors" href="skills.html">Skills</a>
-      <a class="block hover:text-gray-300 transition-colors" href="contact.html">Contact</a>
+    <!-- Navigasi Desktop (sembunyi di mobile) -->
+    <nav class="desktop-menu hidden md:flex space-x-6">
+      <a class="hover:text-gray-300 transition-colors relative after:w-0 hover:after:w-4/5 after:h-0.5 after:bg-white after:transition-all after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2"
+        href="index.html">Home</a>
+      <a class="hover:text-gray-300 transition-colors relative after:w-0 hover:after:w-4/5 after:h-0.5 after:bg-white after:transition-all after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2"
+        href="about.html">About</a>
+      <a class="hover:text-gray-300 transition-colors relative after:w-0 hover:after:w-4/5 after:h-0.5 after:bg-white after:transition-all after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2"
+        href="skills.html">Skills</a>
+      <a class="hover:text-gray-300 transition-colors relative after:w-0 hover:after:w-4/5 after:h-0.5 after:bg-white after:transition-all after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2"
+        href="contact.html">Contact</a>
     </nav>
 
-    <!-- Main Section -->
-    <main class="flex flex-col items-center justify-center min-h-screen text-center bg-gradient-to-br from-blue-100 to-blue-200 p-4">
-      <div class="max-w-lg">
-        <h1 class="text-4xl md:text-5xl font-bold mb-2">Hi There,</h1>
-        <h1 class="text-4xl md:text-5xl font-bold">
-          I'm <span class="text-orange-500">Fikhru Maulana</span>
-        </h1>
-        <p id="typing-effect" class="text-lg md:text-2xl mt-4"></p>
-        <button
-          class="mt-6 px-6 md:px-8 py-2 md:py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105"
-        >
-          About Me
-        </button>
-      </div>
+    <!-- Burger Menu untuk Mobile -->
+    <div class="mobile-menu md:hidden">
+      <button id="menu-btn">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
 
-      <!-- Social Media Links -->
-<div class="flex justify-center space-x-6 mt-8">
-  <a class="text-2xl md:text-3xl text-gray-600 hover:text-green-500 transition-colors" href="https://wa.me/your-phone-number" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a class="text-2xl md:text-3xl text-gray-600 hover:text-pink-500 transition-colors" href="https://www.instagram.com/your-instagram-username" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a class="text-2xl md:text-3xl text-gray-600 hover:text-black transition-colors" href="https://github.com/your-github-username" target="_blank">
-    <i class="fab fa-github"></i>
-  </a>
-  <a class="text-2xl md:text-3xl text-gray-600 hover:text-blue-400 transition-colors" href="https://www.tiktok.com/@your-tiktok-username" target="_blank">
-    <i class="fab fa-tiktok"></i>
-  </a>
-</div>
+  <script>
+    const navbar = document.querySelector('#navbar')
 
-
-      <!-- Profile Picture -->
-      <div class="mt-12">
-        <img
-        alt="Codify Fikhru Logo"
-        class="rounded-full shadow-lg border-4 border-white"
-        height="200"
-        src="Codify.jpg"
-        width="200"
-      />
-      
-      </div>
-    </main>
-
-    <script>
-      // JavaScript untuk mengontrol burger menu di mobile
-      const menuBtn = document.getElementById('menu-btn');
-      const mobileNav = document.getElementById('mobile-nav');
-    
-      menuBtn.addEventListener('click', () => {
-        mobileNav.classList.toggle('hidden');
-      });
-    
-      // Typing effect script dengan penyesuaian kecepatan
-      const typedText = "Front-End Web Developer";
-      let index = 0;
-      let isDeleting = false;
-      let typingSpeed = 100;  // Kecepatan mengetik dipercepat
-      let deletingSpeed = 50; // Kecepatan menghapus dipercepat
-      let pauseTime = 500;    // Waktu jeda sebelum mulai menghapus dikurangi
-    
-      function typeWriter() {
-        const element = document.getElementById("typing-effect");
-    
-        if (isDeleting) {
-          element.innerHTML = typedText.substring(0, index - 1);
-          index--;
-          typingSpeed = deletingSpeed; // Gunakan kecepatan penghapusan
-        } else {
-          element.innerHTML = typedText.substring(0, index + 1);
-          index++;
-        }
-    
-        // Ketika teks selesai ditulis, jeda sebelum mulai menghapus
-        if (!isDeleting && index === typedText.length) {
-          typingSpeed = pauseTime; // Jeda sebelum menghapus
-          isDeleting = true;
-        }
-        // Ketika penghapusan selesai, mulai mengetik lagi
-        else if (isDeleting && index === 0) {
-          typingSpeed = 100; // Kembali ke kecepatan mengetik
-          isDeleting = false;
-        }
-    
-        setTimeout(typeWriter, typingSpeed);
+    window.addEventListener('scroll', () => {
+      if (scrollY > 10) {
+        navbar.classList.add('lg:bg-blue-600', 'lg:text-white', 'shadow-md')
+      } else {
+        navbar.classList.remove('lg:bg-blue-600', 'lg:text-white', 'shadow-md')
       }
-    
-      document.addEventListener("DOMContentLoaded", function() {
-        typeWriter();
-      });
-    </script>
-    
+    })
+  </script>
+
+  <!-- Dropdown Menu Mobile -->
+  <nav id="mobile-nav" class="mobile-menu hidden bg-blue-600 text-white p-4 space-y-2 text-center">
+    <a class="block hover:text-gray-300 transition-colors" href="index.html">Home</a>
+    <a class="block hover:text-gray-300 transition-colors" href="about.html">About</a>
+    <a class="block hover:text-gray-300 transition-colors" href="skills.html">Skills</a>
+    <a class="block hover:text-gray-300 transition-colors" href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Main Section -->
+  <main
+    class="flex flex-col items-center justify-center min-h-screen text-center bg-gradient-to-br from-blue-100 to-blue-200 p-4">
+    <div class="max-w-lg">
+      <h1 class="text-4xl md:text-5xl font-bold mb-2">Hi There,</h1>
+      <h1 class="text-4xl md:text-5xl font-bold">
+        I'm <span class="text-orange-500">Fikhru Maulana</span>
+      </h1>
+      <p id="typing-effect" class="text-lg md:text-2xl mt-4"></p>
+      <button
+        class="mt-6 px-6 md:px-8 py-2 md:py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+        About Me
+      </button>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="flex justify-center space-x-6 mt-8">
+      <a class="text-2xl md:text-3xl text-gray-600 hover:text-green-500 transition-colors"
+        href="https://wa.me/+6287755860381" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a class="text-2xl md:text-3xl text-gray-600 hover:text-pink-500 transition-colors"
+        href="https://www.instagram.com/fikru_05?igsh=YzU1NGVlODEzOA==" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="text-2xl md:text-3xl text-gray-600 hover:text-black transition-colors"
+        href="https://github.com/Codify-Fikhru" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="text-2xl md:text-3xl text-gray-600 hover:text-blue-400 transition-colors"
+        href="https://www.tiktok.com/@fikhru05?_t=8qDybAPyYzN&_r=1" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+
+
+    <!-- Profile Picture -->
+    <div class="mt-12">
+      <img alt="Codify Fikhru Logo" class="rounded-full shadow-lg border-4 border-white" height="200" src="Codify.jpg"
+        width="200" />
+
+    </div>
+  </main>
+
+  <script>
+    // JavaScript untuk mengontrol burger menu di mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    menuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Typing effect script dengan penyesuaian kecepatan
+    const typedText = "Front-End Web Developer";
+    let index = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;  // Kecepatan mengetik dipercepat
+    let deletingSpeed = 50; // Kecepatan menghapus dipercepat
+    let pauseTime = 500;    // Waktu jeda sebelum mulai menghapus dikurangi
+
+    function typeWriter() {
+      const element = document.getElementById("typing-effect");
+
+      if (isDeleting) {
+        element.innerHTML = typedText.substring(0, index - 1);
+        index--;
+        typingSpeed = deletingSpeed; // Gunakan kecepatan penghapusan
+      } else {
+        element.innerHTML = typedText.substring(0, index + 1);
+        index++;
+      }
+
+      // Ketika teks selesai ditulis, jeda sebelum mulai menghapus
+      if (!isDeleting && index === typedText.length) {
+        typingSpeed = pauseTime; // Jeda sebelum menghapus
+        isDeleting = true;
+      }
+      // Ketika penghapusan selesai, mulai mengetik lagi
+      else if (isDeleting && index === 0) {
+        typingSpeed = 100; // Kembali ke kecepatan mengetik
+        isDeleting = false;
+      }
+
+      setTimeout(typeWriter, typingSpeed);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      typeWriter();
+    });
+  </script>
